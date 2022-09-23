@@ -137,6 +137,49 @@ namespace ДЗ_1709
             //ДЗ задача номер 5
             Console.WriteLine("");
             Console.WriteLine("ДЗ задача номер 5");
+            Console.Write("Рыночная цена виски: ");
+            int normPrice = int.Parse(Console.ReadLine()); // 10
+            Console.Write("скидка в производстве %: ");
+            int salePrice = 100 - int.Parse(Console.ReadLine()); // 10
+            Console.Write("стоимость отпуска: ");
+            int holidayPrice = int.Parse(Console.ReadLine()); // 500
+            int income = normPrice - (normPrice * salePrice) / 100;
+            Console.WriteLine(income);
+            int amount = holidayPrice / income;
+            Console.WriteLine($"Вам нужно купить {amount} бутылок виски");
+            Console.ReadKey();
+
+            //ДЗ задача номер 6
+            Console.WriteLine("");
+            Console.WriteLine("ДЗ задача номер 6");
+            double Speed(double speed)
+            {
+
+                return (speed * 100000) / 3600;
+            }
+            Console.Write("Какая скорость у таракна?(в км/ч): ");
+            double speed = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"Скорость таракана в м/с = {(int)Speed(speed)}");
+            Console.ReadKey();
+
+
+            //ДЗ задача номер 7
+            Console.WriteLine("");
+            Console.WriteLine("ДЗ задача номер 7");
+            Console.WriteLine("Введите строку");
+            string textt = Console.ReadLine();
+            string newtext = "";
+            for (int i = 0; i < text.Length; i++)
+                if (text[i] != text.ToUpper()[i])
+                    newtext += text.ToUpper()[i];
+                else
+                {
+                    newtext += text.ToLower()[i];
+                }
+            Console.WriteLine(newtext);
+
+
+
         }
     }
 }

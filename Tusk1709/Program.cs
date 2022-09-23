@@ -78,7 +78,22 @@ namespace Tusk1709
             double alcohol_percentage5 = (person5.alcohol_drink / sum_alcohol) * 100;
             Console.WriteLine($"1 студент выпил {(int)alcohol_percentage}%, 2 студент выпил {(int)alcohol_percentage2}%, 3 студент выпил {(int)alcohol_percentage3}%, 4 студент выпил {(int)alcohol_percentage4}%, 5 студент выпил {(int)alcohol_percentage5}%");
 
-            Console.ReadKey();
+            //ДЗ задача номер 7
+            Console.WriteLine("");
+            Console.WriteLine("ДЗ задача номер 7");
+            Console.WriteLine("Введите строку");
+            string text = Console.ReadLine();
+            string newtext = "";
+            for (int i = 0; i < text.Length; i++)
+                if (text[i] != text.ToUpper()[i])
+                    newtext += text.ToUpper()[i];
+                else
+                {
+                    newtext += text.ToLower()[i];
+                }
+            Console.WriteLine(newtext);
+
+
         }
     }
 }
