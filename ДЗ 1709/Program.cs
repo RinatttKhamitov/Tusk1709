@@ -107,6 +107,7 @@ namespace ДЗ_1709
             Console.WriteLine("float: хранит число с плавающей точкой от -3.4*1038 до 3.4*1038 и занимает 4 байта");
             Console.WriteLine("double: хранит число с плавающей точкой от ±5.0*10-324 до ±1.7*10308 и занимает 8 байта");
             Console.WriteLine("decimal: хранит десятичное дробное число. Если употребляется без десятичной запятой, имеет значение от ±1.0*10-28 до ±7.9228*1028, может хранить 28 знаков после запятой и занимает 16 байт");
+            // Строка
             Console.WriteLine("char: хранит одиночный символ в кодировке Unicode и занимает 2 байта");
             Console.WriteLine("string: хранит набор символов Unicode");
             Console.WriteLine("object: может хранить значение любого типа данных и занимает 4 байта на 32-разрядной платформе и 8 байт на 64-разрядной платформе");
@@ -129,6 +130,7 @@ namespace ДЗ_1709
             //ДЗ задача номер 4
             Console.WriteLine("");
             Console.WriteLine("ДЗ задача номер 4");
+            Console.WriteLine("Введи два слова");
             string text = Console.ReadLine(); 
             string[] slova = text.Split(' ');
             Console.WriteLine($"{slova[0][0]} {slova[1][0]}");
@@ -144,7 +146,6 @@ namespace ДЗ_1709
             Console.Write("стоимость отпуска: ");
             int holidayPrice = int.Parse(Console.ReadLine()); // 500
             int income = normPrice - (normPrice * salePrice) / 100;
-            Console.WriteLine(income);
             int amount = holidayPrice / income;
             Console.WriteLine($"Вам нужно купить {amount} бутылок виски");
             Console.ReadKey();
@@ -169,12 +170,12 @@ namespace ДЗ_1709
             Console.WriteLine("Введите строку");
             string textt = Console.ReadLine();
             string newtext = "";
-            for (int i = 0; i < text.Length; i++)
-                if (text[i] != text.ToUpper()[i])
-                    newtext += text.ToUpper()[i];
+            for (int i = 0; i < textt.Length; i++)
+                if (textt[i] != textt.ToUpper()[i])
+                    newtext += textt.ToUpper()[i];
                 else
                 {
-                    newtext += text.ToLower()[i];
+                    newtext += textt.ToLower()[i];
                 }
             Console.WriteLine(newtext);
 
